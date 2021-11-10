@@ -6,15 +6,24 @@ namespace Tuple
     {
         static void Main(string[] args)
         {
-            (int xDistance, int yDistance) distance = FindDistance(5, 9, 11, 17);
+            (int xDistance, int yDistance) distance = FindDistance(
+                new Point { X = 5, Y = 9 }, 
+                new Point { X = 11, Y = 17 }
+            );
 
             Console.WriteLine($"Distance of X1 & X2 {distance.xDistance}");
             Console.WriteLine($"Distance of Y1 & Y2 {distance.yDistance}");
         }
 
-        static (int, int) FindDistance(int x1, int y1, int x2, int y2)
+        static (int, int) FindDistance(Point p1, Point p2)
         {
-            return (Math.Abs(x2 - x1), Math.Abs(y2 - y1));
+            return (Math.Abs(p2.X - p1.X), Math.Abs(p2.Y - p1.Y));
         }
+    }
+
+    class Point
+    {
+        public int X { get; set; }
+        public int Y { get; set; }
     }
 }

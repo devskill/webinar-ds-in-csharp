@@ -29,7 +29,7 @@ namespace ClassStructRecord
             Console.WriteLine("---------------------------");
 
             #endregion
-
+         
             #region Struct
             Point p1 = new Point();
             p1.X = 5;
@@ -53,6 +53,7 @@ namespace ClassStructRecord
             Console.WriteLine("---------------------------");
 
             #endregion
+
 
             #region Record
             Point3D m1 = new Point3D();
@@ -96,6 +97,7 @@ namespace ClassStructRecord
 
 
             #endregion
+            
         }
     }
 }
